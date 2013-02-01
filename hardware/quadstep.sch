@@ -11326,7 +11326,7 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="C3" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="C4" library="SparkFun" deviceset="CAP" device="0805" value="1uF"/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="C5" library="SparkFun" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
+<part name="C5" library="SparkFun" deviceset="CAP" device="0402-CAP" value="0.1uF/100V"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
 <part name="R3" library="SparkFun" deviceset="TRIMPOT" device="SMD" value="10k"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
@@ -11524,6 +11524,12 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <text x="170.18" y="7.62" size="1.778" layer="97">A.Weiss sparkfun.com</text>
 <text x="152.4" y="5.08" size="1.778" layer="97">Reference design by: SchmalzHaus.com/BigEasyDriver</text>
 <text x="342.9" y="129.54" size="1.778" layer="97">3.3V or 5V</text>
+<text x="251.46" y="121.92" size="1.778" layer="97">*use PRT-08432</text>
+<text x="124.46" y="213.36" size="1.778" layer="97">*use PRT-08084</text>
+<text x="266.7" y="213.36" size="1.778" layer="97">*use PRT-08084</text>
+<text x="266.7" y="213.36" size="1.778" layer="97">*use PRT-08084</text>
+<text x="121.92" y="96.52" size="1.778" layer="97">*use PRT-08084</text>
+<text x="264.16" y="96.52" size="1.778" layer="97">*use PRT-08084</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>

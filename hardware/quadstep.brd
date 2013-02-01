@@ -193,6 +193,8 @@
 <text x="51.816" y="12.065" size="1.016" layer="21" font="vector" ratio="18" rot="R180">RS</text>
 <text x="45.085" y="54.864" size="1.27" layer="21" font="vector" ratio="18" rot="R270">GND</text>
 <text x="45.085" y="14.859" size="1.27" layer="21" font="vector" ratio="18" rot="R270">GND</text>
+<text x="8.509" y="28.829" size="1.27" layer="22" font="vector" ratio="15" rot="SMR0">GND</text>
+<text x="8.255" y="35.941" size="1.27" layer="22" font="vector" ratio="15" rot="SMR0">VIN</text>
 </plain>
 <libraries>
 <library name="SparkFun">
@@ -1797,7 +1799,7 @@ design rules under a new name.</description>
 <element name="R2" library="SparkFun" package="0402-RES" value="390" x="38.1" y="38.1" rot="R180"/>
 <element name="C3" library="SparkFun" package="EIA3216" value="10uF" x="38.1" y="30.48" rot="R90"/>
 <element name="C4" library="SparkFun" package="0805" value="1uF" x="40.64" y="30.48" rot="R270"/>
-<element name="C5" library="SparkFun" package="0402-CAP" value="0.1uF" x="26.67" y="36.83" rot="R90"/>
+<element name="C5" library="SparkFun" package="0402-CAP" value="0.1uF/100V" x="26.67" y="36.83" rot="R90"/>
 <element name="R3" library="SparkFun" package="TRIMPOT-3MM" value="10k" x="7.62" y="60.96" rot="R90"/>
 <element name="C6" library="SparkFun" package="0402-CAP" value="0.1uF" x="11.43" y="40.64" rot="R90"/>
 <element name="R4" library="SparkFun" package="R2010" value="0.11" x="22.86" y="53.34" rot="R180"/>
@@ -2456,9 +2458,11 @@ design rules under a new name.</description>
 <wire x1="18.161" y1="41.402" x2="17.78" y2="41.783" width="0.2032" layer="15"/>
 <wire x1="17.78" y1="41.783" x2="17.78" y2="42.418" width="0.2032" layer="15"/>
 <wire x1="17.78" y1="41.29" x2="17.78" y2="42.418" width="0.2032" layer="1"/>
-<wire x1="22.352" y1="41.402" x2="27.94" y2="46.99" width="0.2032" layer="15"/>
-<wire x1="27.94" y1="46.99" x2="30.607" y2="46.99" width="0.2032" layer="15"/>
-<wire x1="30.607" y1="46.99" x2="32.766" y2="49.149" width="0.2032" layer="15"/>
+<wire x1="22.352" y1="41.402" x2="26.67" y2="45.72" width="0.2032" layer="15"/>
+<wire x1="26.67" y1="45.72" x2="30.099" y2="45.72" width="0.2032" layer="15"/>
+<wire x1="30.099" y1="45.72" x2="31.496" y2="47.117" width="0.2032" layer="15"/>
+<wire x1="31.496" y1="47.117" x2="31.496" y2="47.879" width="0.2032" layer="15"/>
+<wire x1="31.496" y1="47.879" x2="32.766" y2="49.149" width="0.2032" layer="15"/>
 </signal>
 <signal name="EN1">
 <contactref element="U1" pad="P$2"/>
@@ -2577,13 +2581,14 @@ design rules under a new name.</description>
 <wire x1="4.953" y1="5.08" x2="6.223" y2="5.08" width="0.2032" layer="16"/>
 <wire x1="6.223" y1="5.08" x2="7.62" y2="6.477" width="0.2032" layer="16"/>
 <via x="9.779" y="19.177" extent="1-16" drill="0.381"/>
-<wire x1="9.779" y1="19.177" x2="9.779" y2="16.129" width="0.2032" layer="2"/>
-<wire x1="9.779" y1="16.129" x2="9.271" y2="15.621" width="0.2032" layer="2"/>
-<wire x1="9.271" y1="15.621" x2="9.271" y2="9.398" width="0.2032" layer="2"/>
+<wire x1="9.271" y1="16.637" x2="9.271" y2="9.398" width="0.2032" layer="2"/>
 <wire x1="9.271" y1="9.398" x2="4.953" y2="5.08" width="0.2032" layer="2"/>
 <wire x1="6.17" y1="5.08" x2="4.953" y2="5.08" width="0.2032" layer="1"/>
 <wire x1="9.779" y1="19.177" x2="11.938" y2="19.177" width="0.2032" layer="15"/>
 <wire x1="11.938" y1="19.177" x2="12.954" y2="20.193" width="0.2032" layer="15"/>
+<wire x1="9.271" y1="16.637" x2="9.017" y2="16.891" width="0.2032" layer="2"/>
+<wire x1="9.017" y1="16.891" x2="9.017" y2="18.415" width="0.2032" layer="2"/>
+<wire x1="9.017" y1="18.415" x2="9.779" y2="19.177" width="0.2032" layer="2"/>
 </signal>
 <signal name="N$23">
 <contactref element="U3" pad="P$4"/>
@@ -2662,7 +2667,7 @@ design rules under a new name.</description>
 <vertex x="20.955" y="17.5768"/>
 <vertex x="19.7104" y="17.5768"/>
 </polygon>
-<via x="21.5646" y="16.51" extent="1-16" drill="0.381"/>
+<via x="21.5646" y="16.51" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="21.7932" y="16.9164"/>
 <vertex x="22.4282" y="16.2814"/>
@@ -2846,7 +2851,7 @@ design rules under a new name.</description>
 <vertex x="37.465" y="17.5768"/>
 <vertex x="36.2204" y="17.5768"/>
 </polygon>
-<via x="38.0746" y="16.51" extent="1-16" drill="0.381"/>
+<via x="38.0746" y="16.51" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="37.6428" y="16.9164"/>
 <vertex x="37.6682" y="16.9164"/>
@@ -3027,7 +3032,7 @@ design rules under a new name.</description>
 <vertex x="31.115" y="48.4632"/>
 <vertex x="32.3596" y="48.4632"/>
 </polygon>
-<via x="30.5054" y="49.53" extent="1-16" drill="0.381"/>
+<via x="30.5054" y="49.53" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="30.2768" y="49.1236"/>
 <vertex x="29.6418" y="49.7586"/>
@@ -3594,7 +3599,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="P$1"/>
 <contactref element="JP2" pad="2"/>
 <contactref element="JP29" pad="4"/>
-<via x="13.9954" y="49.53" extent="1-16" drill="0.381"/>
+<via x="13.9954" y="49.53" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="1" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="15.8496" y="48.5902"/>
 <vertex x="15.494" y="48.5902"/>
@@ -3794,6 +3799,22 @@ design rules under a new name.</description>
 <via x="36.576" y="38.989" extent="1-16" drill="0.381"/>
 <via x="25.146" y="36.068" extent="1-16" drill="0.381"/>
 <via x="26.162" y="62.103" extent="1-16" drill="0.381"/>
+<via x="13.589" y="47.498" extent="1-16" drill="0.381"/>
+<via x="21.844" y="47.244" extent="1-16" drill="0.381"/>
+<via x="30.099" y="47.498" extent="1-16" drill="0.381"/>
+<via x="40.894" y="47.498" extent="1-16" drill="0.381"/>
+<via x="38.481" y="18.542" extent="1-16" drill="0.381"/>
+<via x="30.099" y="18.669" extent="1-16" drill="0.381"/>
+<via x="22.479" y="18.923" extent="1-16" drill="0.381"/>
+<via x="13.208" y="18.669" extent="1-16" drill="0.381"/>
+<via x="9.652" y="45.974" extent="1-16" drill="0.381"/>
+<via x="9.906" y="17.526" extent="1-16" drill="0.381"/>
+<via x="4.699" y="16.256" extent="1-16" drill="0.381"/>
+<via x="23.368" y="37.592" extent="1-16" drill="0.381"/>
+<via x="25.019" y="40.894" extent="1-16" drill="0.381"/>
+<via x="26.035" y="57.277" extent="1-16" drill="0.381"/>
+<via x="25.908" y="3.683" extent="1-16" drill="0.381"/>
+<via x="27.051" y="29.845" extent="1-16" drill="0.381"/>
 </signal>
 <signal name="N$5">
 <contactref element="U3" pad="P$21"/>
@@ -3810,7 +3831,7 @@ design rules under a new name.</description>
 <vertex x="14.605" y="17.5768"/>
 <vertex x="15.8496" y="17.5768"/>
 </polygon>
-<via x="13.9954" y="16.51" extent="1-16" drill="0.381"/>
+<via x="13.9954" y="16.51" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="14.4272" y="16.9164"/>
 <vertex x="14.4018" y="16.9164"/>
@@ -3870,7 +3891,7 @@ design rules under a new name.</description>
 <vertex x="31.115" y="17.5768"/>
 <vertex x="32.3596" y="17.5768"/>
 </polygon>
-<via x="30.5054" y="16.51" extent="1-16" drill="0.381"/>
+<via x="30.5054" y="16.51" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="30.2768" y="16.9164"/>
 <vertex x="29.6418" y="16.2814"/>
@@ -3903,7 +3924,7 @@ design rules under a new name.</description>
 <vertex x="37.465" y="48.4632"/>
 <vertex x="36.2204" y="48.4632"/>
 </polygon>
-<via x="38.0746" y="49.53" extent="1-16" drill="0.381"/>
+<via x="38.0746" y="49.53" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="37.6428" y="49.1236"/>
 <vertex x="37.6682" y="49.1236"/>
@@ -3938,7 +3959,7 @@ design rules under a new name.</description>
 <vertex x="20.955" y="48.4632"/>
 <vertex x="19.7104" y="48.4632"/>
 </polygon>
-<via x="21.5646" y="49.53" extent="1-16" drill="0.381"/>
+<via x="21.5646" y="49.53" extent="1-16" drill="0.508"/>
 <polygon width="0.2032" layer="16" spacing="2.032" isolate="0.2032" orphans="yes" thermals="no">
 <vertex x="21.7932" y="49.1236"/>
 <vertex x="22.4282" y="49.7586"/>
@@ -3974,58 +3995,58 @@ design rules under a new name.</description>
 </signals>
 <errors>
 <approved hash="19,1,161946ed9e91d99b"/>
-<approved hash="5,1,2731e318954335c3"/>
 <approved hash="5,1,9df6ffeda428e987"/>
+<approved hash="5,1,2731e318954335c3"/>
 <approved hash="5,1,94313e30ed233b4e"/>
 <approved hash="5,1,64b372dce8e5cadf"/>
-<approved hash="19,1,de870ab30769d35d"/>
-<approved hash="19,1,d55f016b07b1d385"/>
 <approved hash="19,1,d127051304e9d0dd"/>
-<approved hash="19,1,6551116517a76393"/>
+<approved hash="19,1,d55f016b07b1d385"/>
+<approved hash="19,1,de870ab30769d35d"/>
 <approved hash="19,1,6e891abd177f634b"/>
+<approved hash="19,1,6551116517a76393"/>
 <approved hash="19,1,6129151d14ff60cb"/>
-<approved hash="19,1,3127451344f530c1"/>
 <approved hash="19,1,355f416b47ad3399"/>
+<approved hash="19,1,3127451344f530c1"/>
 <approved hash="19,1,3e874ab347753341"/>
+<approved hash="19,1,e84f3c7b3ca1e895"/>
 <approved hash="19,1,d627021302e9d6dd"/>
 <approved hash="19,1,dc5f086b09b1dd85"/>
-<approved hash="19,1,e84f3c7b3ca1e895"/>
 <approved hash="19,1,6629121d12ff66cb"/>
-<approved hash="19,1,6c51186519a76d93"/>
 <approved hash="19,1,58412c752cb75883"/>
+<approved hash="19,1,6c51186519a76d93"/>
 <approved hash="19,1,084f7c7b7cbd0889"/>
-<approved hash="19,1,3627421342f536c1"/>
 <approved hash="19,1,3c5f486b49ad3d99"/>
-<approved hash="5,1,69361ee945869440"/>
+<approved hash="19,1,3627421342f536c1"/>
 <approved hash="5,1,00a419299a116e80"/>
-<approved hash="5,1,08488c93cecdfa57"/>
+<approved hash="5,1,69361ee945869440"/>
 <approved hash="5,1,06df42e44986b684"/>
-<approved hash="5,1,bf6307be17722456"/>
+<approved hash="5,1,08488c93cecdfa57"/>
 <approved hash="5,1,75f2829f92536be6"/>
-<approved hash="5,1,60e28a49fd101643"/>
+<approved hash="5,1,bf6307be17722456"/>
 <approved hash="5,1,da25dcbccc7b8007"/>
-<approved hash="5,1,0233b4dc2ce5cd0e"/>
+<approved hash="5,1,60e28a49fd101643"/>
 <approved hash="5,1,f2b139302923fd9f"/>
-<approved hash="19,1,89717d457d8589b1"/>
+<approved hash="5,1,0233b4dc2ce5cd0e"/>
 <approved hash="19,1,bd6149554895bca1"/>
 <approved hash="19,1,b719432d43cdb7f9"/>
+<approved hash="19,1,89717d457d8589b1"/>
+<approved hash="19,1,514ea57aa5b8518c"/>
 <approved hash="19,1,655e916a90a8649c"/>
 <approved hash="19,1,6f269b129bf06fc4"/>
-<approved hash="19,1,514ea57aa5b8518c"/>
+<approved hash="19,1,d726c312c3f7d7c3"/>
 <approved hash="19,1,dd5ec96ac8afdc9b"/>
 <approved hash="19,1,e94efd7afdbfe98b"/>
-<approved hash="19,1,d726c312c3f7d7c3"/>
 <approved hash="19,1,b46140554695b2a1"/>
-<approved hash="19,1,b019442d45cdb1f9"/>
 <approved hash="19,1,bfb94b8d464db279"/>
-<approved hash="19,1,678693b29e706a44"/>
-<approved hash="19,1,6c5e986a9ea86a9c"/>
+<approved hash="19,1,b019442d45cdb1f9"/>
 <approved hash="19,1,68269c129df069c4"/>
+<approved hash="19,1,6c5e986a9ea86a9c"/>
+<approved hash="19,1,678693b29e706a44"/>
 <approved hash="19,1,d45ec06ac6afd29b"/>
 <approved hash="19,1,df86cbb2c677d243"/>
 <approved hash="19,1,d026c412c5f7d1c3"/>
-<approved hash="5,1,28365fe8c777eac0"/>
 <approved hash="5,1,82a45829dbe01001"/>
+<approved hash="5,1,28365fe8c777eac0"/>
 <approved hash="5,1,86df093563d75805"/>
 <approved hash="5,1,43490c42209cd0d7"/>
 </errors>
