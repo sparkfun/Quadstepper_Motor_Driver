@@ -19,9 +19,9 @@ Distributed as-is; no warranty is given.
 
 - Your friends at SparkFun.
 
-BUILD INSTRUCTIONS: 
+Library Update Instructions
+-----------------------------
 
-$git subtree add -P <DIRECTORY NAME> --squash <git repo URL> <ref>
+$git subtree add -P Libraries/Arduino --squash https://github.com/sparkfun/SparkFun_Quadstepper_Motor_Driver_Arduino_Library.git master
 
-$git subtree pull -P <DIRECTORY NAME> --squash <git repo URL> <ref>
-
+$git subtree pull -P Libraries/Arduino --squash https://github.com/sparkfun/SparkFun_Quadstepper_Motor_Driver_Arduino_Library.git master
