@@ -6,10 +6,10 @@
 
 */
 
-#ifndef quadstep_h
-#define quadstep_h
+#ifndef SparkFunQuadstep_h
+#define SparkFunQuadstep_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 class quadstep
 {

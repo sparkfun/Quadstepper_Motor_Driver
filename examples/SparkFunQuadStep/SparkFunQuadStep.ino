@@ -40,7 +40,7 @@
 */
 
 // include the motor library
-#include <quadstep.h>
+#include <SparkFunQuadstep.h>
 
 // create an instance of the class motor
 quadstep quadstep;
